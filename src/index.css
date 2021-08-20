@@ -78,3 +78,7 @@ header{
   text-align: center;
   align-items: center;
 }
+
+.errorDiv{
+  color:red;
+}
