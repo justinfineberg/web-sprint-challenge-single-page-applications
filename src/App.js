@@ -85,7 +85,7 @@ const App = () => {
       </header>
       <Route exact path="/" component={Home} /> 
       <Route path="/pizza">
-        <Form formErrors={formErrors} disabled={disabled} changeForm={changeForm} values={formValues} submit={submitForm}/>
+        <Form formErrors={formErrors} disabled={disabled} changeForm={changeForm} values={formValues} submit={submitForm} orders={orders}/>
       </Route>
     
     </>

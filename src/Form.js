@@ -3,7 +3,7 @@ import React from 'react'
 
 const Form = (props) =>{
 
-    const { changeForm, values, submit, disabled, formErrors } = props;
+    const { changeForm, values, submit, disabled, formErrors, orders } = props;
 
     const onChange = (evt) =>{
         let valueToBeUsed = null;
@@ -38,6 +38,7 @@ const Form = (props) =>{
                         <label>
                             Choice of Size: 
                             <select id="size-dropdown" name="size" onChange={onChange} value={values.size}>
+                                <option value="none">--Select Size --</option>
                                 <option value="small">Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
@@ -62,6 +63,19 @@ const Form = (props) =>{
                     
                 </form>
             </label>
+            <div>
+                {orders && 
+               orders.map((item, index)=>{
+                   return (
+                       <div className="finalOrder">
+                            <h4>Your Order Number #{index+1}</h4>
+                            <h6>Name: {item.name}</h6>
+                            <h6>You got a {item.size} pizza.</h6>
+                       </div>
+                   )
+               })
+                    }
+            </div>
             
         </div>
     )

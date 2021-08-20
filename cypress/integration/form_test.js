@@ -9,6 +9,7 @@ describe('Pizza App', ()=>{
     const checkboxSasuage = () => cy.get('input[name="sasuage"]')
     const checkboxMushrooms = () => cy.get('input[name="mushrooms"]')
     const submitBtn = () => cy.get(`button[id="order-button"]`)
+    const dropdown = () => cy.get('select[name="size"]')
 
     it('Sanity check to make sure that tests work', () => {
         // "it" is a test
@@ -48,6 +49,7 @@ describe('Pizza App', ()=>{
         submitBtn().should('be.disabled')
         textInputName().type('Justin')
         checkboxSasuage().check()
+        dropdown().select('medium')
         submitBtn().should('not.be.disabled')
         submitBtn().click()
         textInputName().should('have.value', '')
@@ -57,33 +59,3 @@ describe('Pizza App', ()=>{
 
 
 
-
-   
-
-//       authorInput()
-//         .should('have.value', '')
-//         .type('Casey!')
-//         .should('have.value', 'Casey!')
-//     })
-
-//     it('the submit button enables when both inputs are filled out', () => {
-//       authorInput().type('Casey')
-//       textInput().type('Have fun!')
-//       submitBtn().should('not.be.disabled')
-//     })
-
-//     it('the cancel button can reset the inputs and disable the submit button', () => {
-//       authorInput().type('Casey')
-//       textInput().type('Have fun!')
-//       cancelBtn().click()
-//       textInput().should('have.value', '')
-//       authorInput().should('have.value', '')
-//       submitBtn().should('be.disabled')
-//     })
-//   })
-
-//   describe('Adding a new quote', () => {
-//     it('can submit and delete a new quote', () => {
-//       textInput().type('Have fun!')
-//       authorInput().type('Casey')
-//       submitBtn().click()

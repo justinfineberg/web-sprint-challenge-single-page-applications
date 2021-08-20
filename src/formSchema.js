@@ -7,7 +7,8 @@ const formSchema = yup.object().shape({
         .required('Name is required')
         .min(2, 'name must be at least 2 characters'),
     size: yup
-    .string(),
+    .string()
+        .required('Pick a size'),
     onions: yup.boolean(), 
     sasuage: yup.boolean(),
     mushrooms: yup.boolean(),
