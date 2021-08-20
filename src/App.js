@@ -54,6 +54,7 @@ const App = () => {
       size: formValues.size,
       onions: formValues.onions,
       mushrooms: formValues.mushrooms,
+      sasuage: formValues.sasuage,
       bacon: formValues.bacon,
       special: formValues.special.trim()
     }
