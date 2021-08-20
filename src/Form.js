@@ -30,14 +30,14 @@ const Form = (props) =>{
 
 
                         <label>
-                            Name:
-                            <input name="name" type="text" placeholder="Fill out your Name" onChange={onChange} value={values.name} />
+                            Name: 
+                            <input id="name-input" name="name" type="text" placeholder="Fill out your Name" onChange={onChange} value={values.name} />
                         </label>
                         
                         
                         <label>
-                            Choice of Size:
-                            <select name="size" onChange={onChange} value={values.size}>
+                            Choice of Size: 
+                            <select id="size-dropdown" name="size" onChange={onChange} value={values.size}>
                                 <option value="small">Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
@@ -46,7 +46,7 @@ const Form = (props) =>{
 
 
                         <label>
-                            Choose your toppings: 
+                            Choose your toppings:  
                             <label> Onions <input name="onions" type="checkbox" checked={values.onions} onChange={onChange} /></label>
                             <label> Sasuage <input name="sasuage" type="checkbox" checked={values.sasuage} onChange={onChange} /></label>
                             <label> Mushrooms <input name="mushrooms" type="checkbox" checked={values.mushrooms} onChange={onChange}/></label>
@@ -54,7 +54,7 @@ const Form = (props) =>{
                         </label>
                     
                         <label>
-                            Special Instructions: 
+                            Special Instructions:  
                             <input type="text" name="special" id="special-text" placeholder="No Cheese, etc." onChange={onChange} value={values.special} />
                         </label>
                         <div className="errorDiv">{formErrors.name}</div>
